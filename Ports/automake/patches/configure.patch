@@ -1,0 +1,14 @@
+Only in automake-1.16.3: .automake-1.16.3.tar.gz_extracted
+Only in automake-1.16.3: config.log
+diff -r -u automake-1.16.3.orig/lib/config.sub automake-1.16.3/lib/config.sub
+--- automake-1.16.3.orig/lib/config.sub	2021-04-22 18:36:28.357654710 -0400
++++ automake-1.16.3/lib/config.sub	2021-04-22 18:38:40.296337587 -0400
+@@ -1726,6 +1726,8 @@
+ 	sco3.2v2 | sco3.2v[4-9]* | sco5v6*)
+ 		# Don't forget version if it is 3.2v4 or newer.
+ 		;;
++	serenity)
++		;;
+ 	none)
+ 		;;
+ 	*)

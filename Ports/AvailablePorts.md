@@ -5,6 +5,7 @@ Please make sure to keep this list up to date when adding and updating ports. :^
 | Port                                   | Name                                                       | Version                  | Website                                                                        |
 |----------------------------------------|------------------------------------------------------------|--------------------------|--------------------------------------------------------------------------------|
 | [`autoconf`](autoconf/)                | GNU Autoconf                                               | 2.71                     | https://www.gnu.org/software/autoconf/                                         |
+| [`automake`](automake/)                | GNU Automake                                               | 1.16.3                   | https://www.gnu.org/software/automake/                                         |
 | [`bash`](bash/)                        | GNU Bash                                                   | 5.0                      | https://www.gnu.org/software/bash/                                             |
 | [`bc`](bc/)                            | bc                                                         | 2.5.1                    | https://github.com/gavinhoward/bc                                              |
 | [`binutils`](binutils/)                | GNU Binutils                                               | 2.32                     | https://www.gnu.org/software/binutils/                                         |

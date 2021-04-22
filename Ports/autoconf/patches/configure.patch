@@ -1,0 +1,11 @@
+--- a/build-aux/config.sub	2021-04-22 18:21:47.189676917 -0400
++++ b/build-aux/config.sub	2021-04-22 18:23:39.838584273 -0400
+@@ -1727,6 +1727,8 @@
+ 	     | midnightbsd* | amdhsa* | unleashed* | emscripten* | wasi* \
+ 	     | nsk* | powerunix* | genode* | zvmoe* | qnx* | emx*)
+ 		;;
++    serenity)
++        ;;
+ 	# This one is extra strict with allowed versions
+ 	sco3.2v2 | sco3.2v[4-9]* | sco5v6*)
+ 		# Don't forget version if it is 3.2v4 or newer.

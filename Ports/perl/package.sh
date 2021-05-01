@@ -28,6 +28,7 @@ configure() {
 		-Udrand48_r_proto \
 		-Ud_drand48_r \
 		-Ud_drand48 \
+		-Udrand48 \
 		-Drandfunc='random' \
 		-Dd_nanosleep
 			#--include-stdint=yes \

@@ -30,13 +30,19 @@ configure() {
 		-Ud_drand48 \
 		-Udrand48 \
 		-Drandfunc='random' \
-		-Dd_nanosleep
+		-Dd_nanosleep \
+		-Dinc_version_list=none \
+		-Duseshrplib \
+		-Dusethreads
 			#--include-stdint=yes \
 			#-Dbyteorder=1234 \
 			#-U d_nanosleep
 }
 
 build() {
-	run make CFLAGS="-DPERL_CORE=1" LDFLAGS="-lm -lcore -lcrypt -lpthread" -j$(nproc)
+	run make CFLAGS="-DPERL_CORE=1" LDFLAGS="-lm -lcore -lcrypt -lpthread -ldl -lc" -j$(nproc)
 }
 
+post_install() {
+    run ln -s perl5/5.32.1/i686-serenity/CORE/libperl.so ${SERENITY_BUILD_DIR}/Root/usr/lib/libperl.so
+}

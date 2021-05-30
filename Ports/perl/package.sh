@@ -40,9 +40,9 @@ configure() {
 }
 
 build() {
-	run make CFLAGS="-DPERL_CORE=1" LDFLAGS="-lm -lcore -lcrypt -lpthread -ldl -lc" -j$(nproc)
+	run make CFLAGS='-DPERL_CORE -DDEBUGGING -O0 -g1' LDFLAGS="-lm -lcore -lcrypt -lpthread -ldl -lc" -j$(nproc)
 }
 
 post_install() {
-    run ln -s perl5/5.32.1/i686-serenity/CORE/libperl.so ${SERENITY_BUILD_DIR}/Root/usr/lib/libperl.so
+    run ln -sf perl5/5.32.1/i686-serenity/CORE/libperl.so ${SERENITY_BUILD_DIR}/Root/usr/lib/libperl.so
 }

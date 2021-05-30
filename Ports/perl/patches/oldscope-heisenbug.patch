@@ -1,0 +1,18 @@
+--- perl-5.32.1-orig/perl.c	2021-01-08 16:20:36.000000000 -0500
++++ perl-5.32.1/perl.c	2021-05-30 14:52:55.261446910 -0400
+@@ -2671,6 +2671,7 @@
+ #endif
+ 
+     oldscope = PL_scopestack_ix;
++    DEBUG_s(Perl_deb(aTHX_ "oldscope = %ld\n", oldscope));
+ #ifdef VMS
+     VMSISH_HUSHED = 0;
+ #endif
+@@ -2685,6 +2686,7 @@
+ 	run_body(oldscope);
+ 	/* FALLTHROUGH */
+     case 2:				/* my_exit() */
++        DEBUG_s(Perl_deb(aTHX_ "oldscope (my_exit) = %ld\n", oldscope));
+ 	while (PL_scopestack_ix > oldscope)
+ 	    LEAVE;
+ 	FREETMPS;
